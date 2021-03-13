@@ -1,7 +1,7 @@
 ![screenshot](image.jpg)
 
 # TINY BASIC VIRTUAL MACHINE
-This repository contains all the elements needed to replicate the original Tiny Basic Interpreter Virtual Machine as described in by Dennis Allison
+This repository contains all the elements needed to replicate the original Tiny Basic Interpreter Virtual Machine as described by Dennis Allison in :
 
 [People's Computer Company Vol. 4, No. 2](http://www.ittybittycomputers.com/IttyBitty/TinyBasic/DDJ1/Design.html)  
 
@@ -42,7 +42,7 @@ The "intp.asm" file is a lighlty modified version of the original IL code (avail
 ```  
 The added DONE instruction (0x22) read the following byte and set the Virtual machine mode.
 
-Availabale modes :
+Available modes :
 ```  
 0 = direct  
 1 = run  
