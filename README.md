@@ -14,31 +14,30 @@ It take as input the "intp.asm" file and build the binary file "intp.o".
 The "intp.asm" file is a lighlty modified version of the original IL code (available as "intp_original.asm").  
 
 ```
---- intp.asm    
-+++ intp_original.asm   
-@@ -59,7 +59,6 @@
+--- intp_original.asm
++++ intp.asm
+@@ -59,6 +59,7 @@
              RSTR                  ;RESTORE LINE NUMBER OF CALL
              NXT                   ;SEQUENCE TO NEXT STATEMENT
      S13:    TST     S14,'END'
--            MODE    0             ;(MY ADD : SET IMMEDIATE MODE)
++            MODE    0             ;(MY ADD : SET IMMEDIATE MODE)
              FIN
      S14:    TST     S15,'LIST'    ;LIST COMMAND
              DONE
-@@ -67,13 +66,10 @@
+@@ -66,10 +67,13 @@
              NXT
      S15:    TST     S16,'RUN'     ;RUN COMMAND
              DONE
--            MODE    1             ;(MY ADD : SET RUN MODE)
++            MODE    1             ;(MY ADD : SET RUN MODE)
              NXT
--    S16:    TST     S_16,'CLEAR'   ;CLEAR COMMAND
-+    S16:    TST     S17,'CLEAR'   ;CLEAR COMMAND
+-    S16:    TST     S17,'CLEAR'   ;CLEAR COMMAND
++    S16:    TST     S_16,'CLEAR'   ;CLEAR COMMAND
              DONE
              JMP     START
--    S_16:   TST     S17,'EXIT'    ;(MY ADD : TERMINATE VIRTUAL MACHINE)
--            MODE    2             ;(MY ADD)
++    S_16:   TST     S17,'EXIT'    ;(MY ADD : TERMINATE VIRTUAL MACHINE)
++            MODE    2             ;(MY ADD)
 
      S17:    ERR                   ;SYNTAX ERROR
-
 ```  
 The added DONE instruction (0x22) read the following byte and set the Virtual machine mode.
 
