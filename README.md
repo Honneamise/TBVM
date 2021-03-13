@@ -106,28 +106,3 @@ LIST
 CLEAR
 EXIT ( to terminate the virtual machine )
 ```
-# Language grammar
-```
-line::= number statement   | statement 
-statement::=  	PRINT expr-list
-	IF expression relop expression THEN statement
-	GOTO expression
-	INPUT var-list
-	LET var = expression
-	GOSUB expression
-	RETURN
-	CLEAR
-	LIST
-	RUN
-	END
-expr-list::= (string | expression) (, (string | expression) )*
-var-list::= var (, var)*
-expression::= (+ | - | e) term ((+ | -) term)*
-term::= factor ((* | /) factor)*
-factor::= var | number | (expression)
-var::= A | B | C ..., | Y | Z
-number::= digit digit*
-digit::= 0 | 1 | 2  | ...  | 8 | 9
-relop::= < (> | = | e) | > (< | = | e) | = 
-
-```
