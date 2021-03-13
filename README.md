@@ -6,7 +6,7 @@ This repository contains all the elements needed to replicate the original Tiny 
 [People's Computer Company Vol. 4, No. 2](http://www.ittybittycomputers.com/IttyBitty/TinyBasic/DDJ1/Design.html)  
 
 
-# ILM_ASSEMBLER
+# ILM ASSEMBLER
 A two steps assembler to build the machine code.
 
 It take as input the "intp.asm" file and build the binary file "intp.o".
