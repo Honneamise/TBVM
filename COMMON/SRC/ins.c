@@ -79,7 +79,7 @@ int InsCode(char *token)
 	if(strcmp(token,"TSTL")==0)     { return 0x1F; };
 	if(strcmp(token,"INSRT")==0)   	{ return 0x20; };
 	if(strcmp(token,"XINIT")==0)    { return 0x21; };
-	if(strcmp(token,"MODE")==0)     { return 0x222; };
+	if(strcmp(token,"MODE")==0)     { return 0x22; };
 
 	return -1;
 }
