@@ -42,7 +42,7 @@ typedef struct ILM
 
     int AESTK[AESTK_SIZE];
 
-    Uint8 VARIABLES[VARIABLES_SIZE];
+    int VARIABLES[VARIABLES_SIZE];
 
 }ILM;
 
